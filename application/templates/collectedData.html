@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h1 class="d-flex h1">{{dict['data']}}
+            <span class="h1-border-1"></span>
+            <span class="h1-border-2"></span>
+        </h1>
+    
+        <section class="tabledata overflow-x-auto">
+            <table class="table table-striped table-hover ms-auto ">
+                <thead>
+                    <tr>
+                        {% for title in dict['keys'] %}
+                        <th class="p-9" scope="col">{{title}}</th>
+                        {% endfor %}
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for loc in range(dict['post']*(dict['number']-1),dict['post']*dict['number']) %}
+                    <tr>
+                        {% for title in dict['keys'] %}
+                        <td>{{dict['collection'][title][loc]}}</td>
+                        {% endfor %}
+
+                    </tr>
+                    {% endfor %}
+
+                </tbody>
+
+
+            </table>
+        </section>
+        <div class="button d-grid gap-2 col-6 mx-auto d-flex">
+            <a class="btn btn-primary btn-lg float-left mx-5" style="wordspace:500px;" href="{{dict['prev']}}">
+                <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i> Previous</a>
+
+            <a class="btn btn-primary btn-lg  float-right" style="wordspace:500px;" href="{{dict['next']}}">Next
+                <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></a>
+        </div>
+  
+        {% endblock %}

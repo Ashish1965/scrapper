@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h1 class="d-flex h1">Contact Us
+            <span class="h1-border-1"></span>
+            <span class="h1-border-2"></span>
+        </h1>
+
+        <section>
+            <article class="article-intro">
+                <h2>Have You Any Questions ?</h2>
+                <span>We are at Your Service</span>
+            </article>
+            <article class="message-box">
+                <div class="message">
+                    <a href="https://api.whatsapp.com/send?phone=8912365487&text=Hello"class="fa-brands fa-whatsapp fa-2xl message-logo"></a>
+                    <h4 class="message-logo-text">Whatsapp On</h4>
+                    <a class="message-logo-text" href="https://api.whatsapp.com/send?phone=8912365487&text=Hello">8912365487</a>
+                 </div>
+                <div class="message">
+                    <a class="fa-solid fa-location-dot fa-2xl message-logo" href="https://www.google.com/maps/search/abc+colony/"></a>
+                    <h4 class="message-logo-text">Office</h4>
+                    <span class="message-logo-text">abc colony</span>
+                </div>
+                <div class="message">
+                    <a href="mailto:someone@example.com" class="fa-solid fa-envelope fa-2xl message-logo "></a>
+                    <h4 class="message-logo-text">Email</h4>
+                    <span class="message-logo-text">abc@gmail.com</span>
+                </div>
+
+            </article>
+        </section>
+        <section>
+            <article class="article-intro">
+                <h2>Send Me An Email</h2>
+                <span>We are reply the Message as soon as possible</span>
+            </article>
+            <article class="form" id="form">
+                <form action="" method="POST">
+                    {{ form.csrf_token() }}
+                        {% if form.name.errors %}
+                        {{ form.name(class="form-control form-control is-invalid") }}
+                        {% for error in form.name.errors %}
+                        <div class="invalid-feedback">
+                            <span>{{ error }}</span>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {{ form.name(placeholder="Name", autocomplete="off", autofocus="off") }}
+                        {% endif %}
+                        {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control is-invalid") }}
+                        {% for error in form.email.errors %}
+                        <div class="invalid-feedback">
+                            <span>{{ error }}</span>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {{ form.email(placeholder="Email", autocomplete="off" ,autofocus="off") }}
+                        {% endif %}
+                        {% if form.suggestion.errors %}
+                        {{ form.suggestion(class="form-control form-control is-invalid") }}
+                        {% for error in form.suggestion.errors %}
+                        <div class="invalid-feedback">
+                            <span>{{ error }}</span>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {{ form.suggestion(class="message-input", placeholder="Suggestion", autocomplete="off", autofocus="off") }}
+                        {% endif %}
+                        {% if form.message.errors %}
+                        {{ form.message(class="form-control form-control is-invalid") }}
+                        {% for error in form.message.errors %}
+                        <div class="invalid-feedback">
+                            <span>{{ error }}</span>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {{ form.message(class="input-last" ,placeholder="Addition Message" ,autocomplete="off", autofocus="off") }}
+                        {% endif %}
+                        {{ form.submit(class="btn btn-primary btn-lg",id="btn") }}
+                </form>
+            </article>
+            {% endblock %}

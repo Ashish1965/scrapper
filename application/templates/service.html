@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1 class="d-flex h1">Service
+    <span class="h1-border-1"></span>
+    <span class="h1-border-2"></span>
+</h1>
+<section class="container">
+    <div class="row my-3">
+        <div class="col-md-3 mx-3 ">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='/assets/img/excel.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Collect Data</h5>
+                    <p class="card-text">This is the section where user can extract data from other website by simply
+                        entering URL and no.of pages contain the data of the website.</p>
+                    <a href="/" class="btn btn-primary">Collect data</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mx-3">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='/assets/img/visual.jpeg')}}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Visualization</h5>
+                    <p class="card-text">This is the section where user can perform Graphical Analysis by making the
+                        graphs of his/her choice.Graphs such as Line and Scatter plot,Histogram,Barplot etc.</p>
+                    <a href="/VisualizeData" class="btn btn-primary">Visualize</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mx-3">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='/assets/img/images (2).jpeg')}}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Data Variation</h5>
+                    <p class="card-text">This is the section where user can analyse the relation among various features
+                        of the Data table using Correlation,Statical analysis and Graphical analysis.</p>
+                    <a href="/FeatureAnalysis" class="btn btn-primary">Show Features</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mx-3">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='/assets/img/images.png')}}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Predict</h5>
+                    <p class="card-text">This is the section where user get the future result that is prediction by
+                        machine using various Assumptions and Hypothesis.</p>
+                    <a href="/Predict" class="btn btn-primary">predict</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock %}

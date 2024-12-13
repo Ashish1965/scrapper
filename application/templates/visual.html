@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1 class="d-flex h1">Visualization
+    <span class="h1-border-1"></span>
+    <span class="h1-border-2"></span>
+</h1>
+<section class="visual">
+    <form class="formm" method="POST">
+        <span class="graph-header">Graphical Analysis
+            <i class="fa-solid fa-chart-column fa-beat fa-xl graph-logo"></i></span>
+        <select class="form-select" aria-label="Default select example" name="x_axis">
+            <option selected name="X-axis">X-axis Feature</option>
+            {% for element in titles %}
+            
+            <option value="{{element}}">{{element}}</option>
+            {% endfor %}
+            <option value="None">None</option>
+        </select>
+
+        <select class="form-select" aria-label="Default select example" name="y_axis">
+            <option selected value="y-axis ">Y-axis Feature</option>
+            {% for element in titles %}
+            <option value="{{element}}" >{{element}}</option>
+            {% endfor %}
+            <option value="None">None</option>
+        </select>
+        
+        <select class="form-select" aria-label="Default select example" name="Hue">
+            <option selected value="{{Hue}}">Hue</option>
+            {% for element in titles %}
+            <option value="{{element}}">{{element}}</option>
+            {% endfor %}
+            <option value="None">None</option>
+        </select>
+
+        <select class="form-select hue" aria-label="Default select example" name="graph">
+            <option selected>Graph-Type</option>
+            <option value="Lineplot">Lineplot</option>
+            <option value="Scatterplot">Scatterplot</option>
+            <option value="Barplot">Barplot</option>
+            <option value="Countplot">Countplot</option>
+            <option value="Boxplot">Boxplot</option>
+            <option value="Pairplot">Pairplot</option>
+            <option value="Histogram">Histogram</option>
+            <option value="Heatmap">Heatmap</option>
+            <option value="Pairplot">Pairplot</option>
+            <option value="lmplot">lmplot</option>
+            <option value="relplot">relplot</option>
+            <option value="jointplot">jointplot</option>
+            <option value="violenplot">violenplot</option>
+            <option value="Displot">Displot</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Get Graph</button>
+    </form>
+</section>
+<section class="graph-block">
+    <h2 class="h1 text-center">Graph</h2>
+    <div class="graph">
+        <img src="static/img/graphs.png" class="img-fluid" alt="">
+
+    </div>
+
+</section>
+{% endblock %}

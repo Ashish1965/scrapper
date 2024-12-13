@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1 class="d-flex h1">Home
+    <span class="h1-border-1"></span>
+    <span class="h1-border-2"></span>
+</h1>
+<section class="home-form">
+    <form action="/collectedData" id="form" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="URL" class="form-label">Put Your URL Here</label>
+            <input type="text" name="url" class="form-control" id="URL" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Example1- http://www.scrapethissite.com/pages/forms/?page_num=
+                and page=25
+            </div>
+            <div id="emailHelp" class="form-text">Example2- https://www.worldometers.info/coronavirus/ and
+                page=1</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">No. of Data Pages in URL</label>
+            <input type="number" name="page" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="allowfile">
+            <label class="form-check-label" for="allowfile">Tick the box for using your files.</label>
+        </div>
+        <div class="mb-3 file-input hidden">
+            <input type="file" class="form-text" id="file" name="file">
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn">Submit</button>
+    </form>
+</section>
+<section class="sample data">
+    <div class="table-header">{{data}}</div>
+
+    <article class="tabledata">
+
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                    {% for title in keys %}
+                    <th scope="col">{{title}}</th>
+                    {% endfor %}
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for loc in range(15) %}
+                <tr>
+                    {% for title in keys %}
+                    <td>{{collection[title][loc]}}</td>
+                    {% endfor %}
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </article>
+
+</section>
+{% endblock %}

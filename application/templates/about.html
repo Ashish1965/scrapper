@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h1 class="d-flex h1">About Us
+            <span class="h1-border-1"></span>
+            <span class="h1-border-2"></span>
+        </h1>
+        <section>
+            <h2 class="about-h2">Introduction</h2>
+            <article class="About-Introduction">
+                <h2 class="required">ML-OOPs Dashboard</h2>
+                <h3 class="Introduction-h3"></h3>
+                <p class="about-p">
+                ML-Oops is a Open-source and new generation dashboard which is specially designed to those person who want to analyze their Data at beginner level. This Dashboard various Functionality to user such as scrapping of Table Data from perticular site such as record of cricket, hocket data etc. Here we have a choice either we scrap the data from the Website or upload the csv or excel files in this Dashboard. You can also able to access various graphs, Correlation matrices, and also able to predict the future result through this Dashboard in the Service Tab. 
+                </p>
+                <ul class="ul-about">
+                    <li class="important">There is Huge Concepts of Data Science hidden behind the background of this Dashboard.</li>
+                    <li>You are not able to Access the services of this Dashboard without Login </li>
+                    <li class="important">The Service Sections of this Dashboard the analysis of data which is previously uploaded or accessed. </li>
+                    <li>If you are not uploaded or accessed any dataset previously then it shows the analysis of Sampledata which is The Hockey dataset that we have take from online website which provides a dataset for scrappers to practice.</li>
+                    <li >Thank For Visit this Dashboard, if you liked Our Services please Response in Contact Section.</li>
+                </ul>
+              
+            </article>
+        </section>
+        <h2 class="about-h2">Owner / Creator</h2>
+        <section class="about-finish">
+            <div class="left_div flex ">
+                <img src="{{url_for('static',filename='/assets/img/PHOTO.jpg')}}" alt="personal_photo">
+
+            </div>
+            <div class="right_div flex">
+                <h3>Aman Soni</h3>
+                <div class="about-description">
+                    <div><a href="https://commons.wikimedia.org/wiki/File:Gole_Ka_Mandir,_Gwalior.JPG"><i
+                                class='bx bx-map-alt'></i></a><strong> Location :</strong> G.K.M,Gwalior</div>
+                    <div><a href="https://www.calculator.net/age-calculator."><i
+                                class='bx bxs-calendar'></i></a><strong>Age:</strong> 20</div>
+                    <div><a href="https://en.wikipedia.org/wiki/India"><i
+                                class='bx bxs-flag'></i></a><strong>Nationality : </strong> Indian </div>
+                    <div><a href="https://www.coursera.org/articles/what-are-technical-skills"><i
+                                class='bx bxs-color'></i></a><strong>Interests : </strong>Web Dev./ML/DL</div>
+                    <div><a href="https://web.mitsgwalior.in/"><i class='bx bxs-graduation'></i></a><strong>Study
+                            :</strong> MITS College</div>
+                    <div class="icons">
+                        <span><a class="github" href="https://github.com/"><i class='bx bx-md  bxl-github'></i></a></span>
+                        <span><a href="https://in.linkedin.com/" class="linkedin"><i class='bx bx-md  bxl-linkedin-square'></i></a></span>
+                        <span><a href="https://twitter.com/i/flow/login" class="twitter"><i class='bx bx-md  bxl-twitter'></i></a></span>
+                        <span><a href="https://www.instagram.com/" class="insta"><i class='bx bx-md bxl-instagram'></i></a></span>
+
+
+                    </div>
+                </div>
+        </section>
+
+        {% endblock %}

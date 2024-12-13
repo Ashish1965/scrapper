@@ -1,0 +1,227 @@
+@media screen and (max-width:780px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100vw;
+        height: 25vh;
+        position: unset;
+    }
+
+    main {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .aside-footer {
+        display: none;
+    }
+
+    /* handle footer using js */
+
+    .nav-header {
+        width: 32%;
+        font-size: 1.5rem;
+        align-items: normal;
+        margin-block: 20px;
+        padding: 5px;
+        border: 2px solid white;
+
+    }
+
+    .nav-items {
+        margin-block: 15px;
+        padding-bottom: 7px;
+        margin-left: 0;
+
+    }
+
+    .nav-links {
+        column-gap: 8px;
+        width: 100%;
+
+    }
+
+
+    .nav-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        column-gap: 30px;
+        margin-block: 0;
+        z-index: 2;
+    }
+
+
+
+    /* home-page-start */
+
+    .home-form {
+
+        padding-block: 30px;
+        margin-top: 30px;
+        /* background-image: url("assets/pexels-pixabay-355465.jpg"); */
+
+    }
+
+
+    .home-form>form>input {
+        font-size: 1rem;
+    }
+
+
+    .form-text {
+        font-size: 0.7rem;
+        z-index: 1;
+    }
+
+    .footer {
+        display: block;
+        margin-block: 0;
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+    }
+
+    .about-finish {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-form {
+        width: 80%;
+    }
+    .login{
+        height:95vh;
+    }
+
+}
+
+@media screen and (min-width:700px) {
+    .graph>img {
+        width: 85%;
+        height: 500px;
+        margin-inline: auto;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+
+ 
+}
+
+@media screen and (max-width:400px) {
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100vw;
+        height: max-content;
+        position: unset;
+
+    }
+
+    #hamberger,
+    .display {
+        display: block !important;
+    }
+
+
+
+    main {
+        width: 100vw;
+        margin: 0;
+    }
+
+
+    /* handle footer using js */
+
+
+
+    .form-text {
+        z-index: 1;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        column-gap: 30px;
+        margin-block: 0;
+        border-top: 1px solid white;
+        background: linear-gradient(65deg, orange 65%, orangered);
+        position: absolute;
+        top: 85px;
+        z-index: 2;
+        top: -100%;
+    }
+
+    .open {
+        transition: .5s all ease-in-out;
+        top: 85px;
+    }
+
+    .right_div {
+        width: 380px;
+    }
+
+    .about-description>div {
+        width: 80%;
+    }
+
+
+    #img {
+        height: 300px;
+    }
+
+    .visual>.formm {
+        width: 95%;
+        margin-block: 50px;
+        background-color: black;
+        padding: 40px 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .formm>select {
+        width: 100%;
+
+    }
+
+    .formm>.hue {
+        width: 100%;
+    }
+
+    .formm>button {
+        width: 50%;
+    }
+
+    .login-form {
+        width: 85%;
+        padding-block: 15px;
+    }
+
+    .login-form>input {
+        width: 65%;
+        height: 30px;
+    }
+
+    .login-form>input[type="submit"] {
+        width:155px;
+        border:none;
+        margin-block:0;
+        padding-block: 0;
+        }
+
+    .login-form>img {
+        margin-bottom: 10px;
+    }
+}
